@@ -1,0 +1,93 @@
+{% load static %}
+<style>
+/* Dropdown menu styles */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--body-color); /* Use the body background color */
+  padding: 0.5rem 0;
+  margin-top: 0.5rem; /* Adjust as needed */
+  border-radius: 0.5rem; /* Adjust as needed */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow for dropdown */
+  z-index: 10;
+  list-style: none;
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown-menu:hover {
+  display: block;
+}
+
+.dropdown-menu li {
+  padding: 0.5rem 1rem; /* Adjust as needed */
+}
+
+.dropdown-menu li a {
+  color: var(--text-color);
+  transition: color 0.3s;
+}
+
+.dropdown-menu li a:hover {
+  color: var(--first-color); /* Change color on hover */
+}
+
+
+
+</style>  
+
+
+<header class="header" id="header">
+    <nav class="nav container">
+        <a href="{% url 'homepage' %}" class="nav__logo">
+            <img src="{% static 'img/logo-nav.png' %}" alt="logo"> SHX FIT
+        </a>
+
+        <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="{% url 'homepage' %}" class="nav__link active-link">Home</a>
+                </li>
+                <li class="nav__item">
+                    <a href="{% url 'programspage' %}" class="nav__link">Programs</a>
+                </li>
+                <li class="nav__item">
+                  <a href="{% url 'bmipage' %}" class="nav__link">BMI</a>
+                </li>
+                <li class="nav__item">
+                  <a href="{% url 'caloriepage' %}" class="nav__link">Calorie Calculator</a>
+                </li>
+                
+                <li class="nav__item"><!-- Move the register button inside a list item -->
+                  {% if flag %}
+                      <a href="{% url 'logout' %}" class="button nav__button">LOGOUT</a>
+                  {% else %}
+                  <a href="{% url 'loginpage' %}" class="button nav__button">LOGIN</a>
+                  {% endif %}
+                </li>
+                
+                <!-- <li class="nav__item"> 
+                    <a href="{% url 'registerpage' %}" class="button nav__button">Register</a>
+                </li> -->
+            </ul>
+
+            <div class="nav__close" id="nav-close">
+                <i class="ri-close-line"></i>
+            </div>
+        </div>
+
+        <!-- Toggle button -->
+        <div class="nav__toggle" id="nav-toggle">
+            <i class="ri-menu-line"></i>
+        </div>
+    </nav>
+</header>
+
+
+
+                      

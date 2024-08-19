@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+    <!--=============== REMIXICON ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!--=============== CSS ===============-->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+    <title>SHX FIT </title>
+</head>
+
+<body>
+    <!--==================== HEADER ====================-->
+    {% include 'header.html' %}
+    
+    <section class="pricing section" id="pricing">
+            <div class="container">
+                <div class="section__data">
+                    <h2 class="section__subtitle">Excercises</h2>
+                    <div class="section__titles">
+                        <h1 class="section__title-border">FOR </h1>
+                        <h1 class="section__title">UPPER LOWER </h1>
+                    </div>
+                </div>
+
+                <div class="pricing__container grid">
+                    <article class="pricing__card">
+                        <header class="pricing__header">
+                            <div class="pricing__shape">
+                                <img src="{% static 'img/program4.png ' %}" alt="pricing image" class="pricing__img">
+                            </div>
+                            <h2 class="pricing__number"> Upper </h2>
+                        </header>
+
+                        <ul class="pricing__list">
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> Targets the muscles of the chest, back, shoulders, and arms
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> Includes compound exercises such as bench press, pull-ups, overhead press, and rows to engage multiple muscle groups
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> Incorporates isolation exercises like bicep curls, tricep extensions, and lateral raises to target specific muscle groups
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> Prioritizes balanced development of the upper body and emphasizes progressive overload to stimulate muscle growth and strength gains
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> Allows adequate recovery between upper body sessions to optimize performance and muscle recovery
+                            </li>
+                        </ul>
+                    
+                        <a href="{% url 'upperpage' %}" class="button button__flex pricing__button">
+                            View Excercises<i class="ri-arrow-right-line"></i>
+                        </a>
+                    </article>
+
+                    <article class="pricing__card">
+                        <header class="pricing__header">
+                            <div class="pricing__shape">
+                                <img src="{% static 'img/program4.png ' %}" alt="pricing image" class="pricing__img">
+                            </div>
+                            <h2 class="pricing__number">Lower</h2>
+                        </header>
+
+                        <ul class="pricing__list">
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> Focuses on exercises targeting the muscles of the lower body, including quadriceps, hamstrings, glutes, and calves
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> Incorporates compound movements such as squats, deadlifts, lunges, and hip thrusts to engage major muscle groups
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> Includes isolation exercises like leg curls, leg extensions, and calf raises to target specific muscles and enhance muscular balance
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> Utilizes both bilateral and unilateral exercises to improve lower body strength, stability, and coordination
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> Emphasizes progressive overload to stimulate muscle growth and strength gains while allowing for adequate recovery between lower body sessions
+                            </li>
+                        </ul>
+                    
+                        <a href="{% url 'lowerpage' %}" class="button button__flex pricing__button">
+                            View Excercises<i class="ri-arrow-right-line"></i>
+                        </a>
+                    </article>
+
+                    
+                    
+                </div>
+            </div>
+        </section>
+
+ <!--========== SCROLL UP ==========-->
+ <a href="#" class="scrollup" id="scroll-up">
+    <i class="ri-arrow-up-line"></i>
+</a>
+
+<!--=============== SCROLLREVEAL ===============-->
+<script src="{% static 'js/scrollreveal.min.js' %}"></script>
+
+<!--=============== EMAIL JS ===============-->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<!--=============== MAIN JS ===============-->
+<script src="{% static 'js/main.js' %}"></script>
+
+</body>
+
+</html>

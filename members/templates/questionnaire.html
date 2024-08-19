@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Questionnaire</title>
+<style>
+    body {
+        color: #fff;
+        font-family: Arial, sans-serif;
+        background-color: hsla(180, 12%, 8%, .8);
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .container {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: hsla(180, 12%, 8%, .8);
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+    select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    button {
+        padding: 10px 20px;
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #45a049;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Questionnaire</h2>
+    <form action="{% url 'questionnairepage' %}" method="post">
+        {%csrf_token%}
+        <label for="dropdown1">What are your fitness goals?</label>
+        <select id="dropdown1" name="dropdown1">
+            <option value="weight loss">weight loss</option>
+            <option value="muscle gain">muscle gain</option>
+            <option value="overall health improvement">overall health improvement</option>
+        </select>
+
+        <label for="dropdown2">What is your current fitness level? </label>
+        <select id="dropdown2" name="dropdown2">
+            <option value="beginner">beginner</option>
+            <option value="intermediate">intermediate</option>
+            <option value="advanced">advanced</option>
+        </select>
+
+        <label for="dropdown3">How much time can you commit to exercise each week?</label>
+        <select id="dropdown3" name="dropdown3">
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+        </select>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>

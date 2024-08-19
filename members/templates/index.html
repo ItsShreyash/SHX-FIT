@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    {% load static %}
+    
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="{% static 'img/favicon.png' %}" type="image/x-icon">
+    
+    <!--=============== REMIXICON ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+    <title>SHX FIT </title>
+</head>
+
+<body>
+    <!--==================== HEADER ====================-->
+    {% include 'header.html' %}
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+        <!--==================== HOME ====================-->
+        <section class="home section" id="home">
+            <div class="home__container container grid">
+                <div class="home__data">
+                    <h2 class="home__subtitle">ONE STOP FOR</h2>
+                    <h1 class="home__title">YOUR FITNESS</h1>
+                    <p class="home__description">
+                      Welcome to SHX FIT where we help you acheive your fitness goals.
+                    </p>
+                    {% if flag %}
+                        <a href="{% url 'programspage' %}" class="button button__flex">Get Started <i class="ri-arrow-right-line"></i></a>
+                    {% else %}
+                        <a href="{% url 'questionnairepage' %}" class="button button__flex">Get Started <i class="ri-arrow-right-line"></i></a>
+                    {% endif %}
+                </div>
+
+                <div class="home__images">
+                    <img src="{% static 'img/home-img.png' %}" alt="home image" class="home__img">
+                    <!-- {% static 'img/home-img.png' %} -->
+
+                    <div class="home__triangle home__triangle-3"></div>
+                    <div class="home__triangle home__triangle-2"></div>
+                    <div class="home__triangle home__triangle-1"></div>
+                </div>
+            </div>
+        </section>
+
+        
+
+
+        <!--==================== CHOOSE US ====================-->
+        <section class="choose section" id="choose">
+            <div class="choose__overflow">
+                <div class="choose__container container grid">
+                    <div class="choose__content">
+                        <div class="section__data">
+                            <h2 class="section__subtitle">Don't let you goals wait</h2>
+                            <div class="section__titles">
+                                <h1 class="section__title-border">START</h1>
+                                <h1 class="section__title">NOW</h1>
+                            </div>
+                        </div>
+
+                        <p class="choose__description">
+                            Choose the program that works for you and start now. Remember the
+                            only bad workout is the one you didn't do.
+                        </p>
+
+                        <div class="choose__data">
+                            <div class="choose__group">
+                                <h3 class="choose__number">200+</h3>
+                                <p class="choose__subtitle">Total Members</p>
+                            </div>
+                            <div class="choose__group">
+                                <h3 class="choose__number">50+</h3>
+                                <p class="choose__subtitle">Best trainers</p>
+                            </div>
+                            <div class="choose__group">
+                                <h3 class="choose__number">25+</h3>
+                                <p class="choose__subtitle">Programs</p>
+                            </div>
+                            <div class="choose__group">
+                                <h3 class="choose__number">100+</h3>
+                                <p class="choose__subtitle">Awards</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="choose__images">
+                        <img src="{% static 'img/choose-img.png' %}" alt="choose image" class="choose__img">
+                        
+
+                        <div class="choose__triangle choose__triangle-1"></div>
+                        <div class="choose__triangle choose__triangle-2"></div>
+                        <div class="choose__triangle choose__triangle-3"></div>
+                    </div>
+                </div>
+            </div>
+        <br>
+        </section>
+        
+
+    
+    <!--========== SCROLL UP ==========-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-line"></i>
+    </a>
+
+    <!--=============== SCROLLREVEAL ===============-->
+    <script src="{% static 'js/scrollreveal.min.js' %}"></script>
+    <!-- {% static 'js/scrollreveal.min.js' %} -->
+
+    <!--=============== EMAIL JS ===============-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="{% static 'js/main.js' %}"></script>
+    <!-- {% static 'js/main.js' %} -->
+</body>
+
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+    <!--=============== REMIXICON ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!--=============== CSS ===============-->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+    <title>SHX FIT </title>
+</head>
+
+<body>
+    <!--==================== HEADER ====================-->
+    {% include 'header.html' %}
+    
+    <section class="pricing section" id="pricing">
+            <div class="container">
+                <div class="section__data">
+                    <h2 class="section__subtitle">Excercises</h2>
+                    <div class="section__titles">
+                        <h1 class="section__title-border">FOR </h1>
+                        <h1 class="section__title">STRENGHT BUILDING</h1>
+                    </div>
+                </div>
+
+                <div class="pricing__container grid">
+                    <article class="pricing__card">
+                        <header class="pricing__header">
+                            <div class="pricing__shape">
+                                <img src="{% static 'img/program1.png' %}" alt="pricing image" class="pricing__img">
+                            </div>
+
+                            <h1 class="pricing__title">Push</h1>
+                            <h2 class="pricing__number">Bench Press</h2>
+                        </header>
+
+                        <ul class="pricing__list">
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> Builds upper body strength and muscle mass
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> Improves pushing power and functional strength
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> Enhances chest, shoulder, and triceps development
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> Boosts metabolism for fat loss and weight management
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> Increases upper body stability and muscle coordination
+                            </li>
+                        </ul>
+                    
+                        <a href="{% url 'benchpage' %}" class="button button__flex pricing__button">
+                            Check Form<i class="ri-arrow-right-line"></i>
+                        </a>
+                    </article>
+
+                    <article class="pricing__card pricing__card-active">
+                        <header class="pricing__header">
+                            <div class="pricing__shape">
+                                <img src="{% static 'img/program1.png' %}" alt="pricing image" class="pricing__img">
+                            </div>
+
+                            <h1 class="pricing__title">Lower</h1>
+                            <h2 class="pricing__number">Squats </h2>
+                        </header>
+
+                        <ul class="pricing__list">
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> Strengthens lower body muscles, including quads, glutes, and hamstrings
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> Improves overall lower body strength and power
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> Enhances core stability and balance
+                            </li>
+                            <li class="pricing__item ">
+                                <i class="ri-checkbox-circle-line"></i> Increases metabolic rate for calorie burning and weight loss
+                            </li>
+                            <li class="pricing__item ">
+                                <i class="ri-checkbox-circle-line"></i> Enhances functional movement patterns for daily activities and sports
+                            </li>
+                        </ul>
+
+                        <a href="{% url 'squatspage' %}" class="button button__flex pricing__button">
+                            Check Form <i class="ri-arrow-right-line"></i>
+                        </a>
+                    </article>
+
+                    <article class="pricing__card">
+                        <header class="pricing__header">
+                            <div class="pricing__shape">
+                                <img src="{% static 'img/program1.png' %}" alt="pricing image" class="pricing__img">
+                            </div>
+
+                            <h1 class="pricing__title">Pull</h1>
+                            <h2 class="pricing__number">Deadlifts</h2>
+                        </header>
+
+                        <ul class="pricing__list">
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> Builds full-body strength, targeting major muscle groups like the back, glutes, hamstrings, and core
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> Improves grip strength and forearm muscles
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> Enhances posture and spinal erector muscles
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> Increases overall functional strength for lifting and daily activities
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> Boosts metabolic rate for calorie burning and fat loss
+                            </li>
+                        </ul>
+
+                        <a href="{% url 'deadliftspage' %}" class="button button__flex pricing__button">
+                            Check Form <i class="ri-arrow-right-line"></i>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+        
+ <!--========== SCROLL UP ==========-->
+ <a href="#" class="scrollup" id="scroll-up">
+    <i class="ri-arrow-up-line"></i>
+</a>
+
+<!--=============== SCROLLREVEAL ===============-->
+<script src="{% static 'js/scrollreveal.min.js' %}"></script>
+
+<!--=============== EMAIL JS ===============-->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<!--=============== MAIN JS ===============-->
+<script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>

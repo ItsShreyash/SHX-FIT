@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+    <!--=============== REMIXICON ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!--=============== CSS ===============-->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+    <title>SHX FIT </title>
+</head>
+
+<body>
+    <!--==================== HEADER ====================-->
+    {% include 'header.html' %}
+
+    <section class="pricing section" id="pricing">
+            <div class="container">
+                <div class="section__data">
+                    <h2 class="section__subtitle">Workout Splits</h2>
+                    <div class="section__titles">
+                        <h1 class="section__title-border">FOR </h1>
+                        <h1 class="section__title">HYPERTROPHY</h1>
+                    </div>
+                </div>
+
+                <div class="pricing__container grid">
+                    <article class="pricing__card">
+                        <header class="pricing__header">
+                            <div class="pricing__shape">
+                                <img src="{% static 'img/program4.png' %}" alt="pricing image" class="pricing__img">
+                            </div>
+
+                            <h1 class="pricing__title">3 Day Split</h1>
+                            <h2 class="pricing__number">Full <br> Body</h2>
+                        </header>
+
+                        <ul class="pricing__list">
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> Efficiently targets multiple muscle groups in one session
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> Allows for adequate recovery time for each muscle group
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> Provides flexibility in training frequency and volume
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> Promotes balanced muscle development and symmetry
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> Enhances overall strength and muscle definition
+                            </li>
+                        </ul>
+                    
+                        <a href="{% url 'fullbodypage' %}" class="button button__flex pricing__button">
+                            View <i class="ri-arrow-right-line"></i>
+                        </a>
+                    </article>
+
+                    <article class="pricing__card pricing__card-active">
+                        <header class="pricing__header">
+                            <div class="pricing__shape">
+                                <img src="{% static 'img/program4.png' %}" alt="pricing image" class="pricing__img">
+                            </div>
+
+                            <h1 class="pricing__title">6 Day Split</h1>
+                            <h2 class="pricing__number">Push Pull Legs </h2>
+                        </header>
+
+                        <ul class="pricing__list">
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> Provides a balanced approach to training by separating pushing and pulling movements
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> Allows for greater focus and intensity on specific muscle groups during workouts
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> Promotes muscle growth and strength gains through targeted training stimuli
+                            </li>
+                            <li class="pricing__item ">
+                                <i class="ri-checkbox-circle-line"></i> Maximizes recovery by targeting different muscle groups on different days
+                            </li>
+                            <li class="pricing__item ">
+                                <i class="ri-checkbox-circle-line"></i> Offers versatility in programming and exercise selection for continued progress
+                            </li>
+                        </ul>
+
+                        <a href="{% url 'pplpage' %}" class="button button__flex pricing__button">
+                            View <i class="ri-arrow-right-line"></i>
+                        </a>
+                    </article>
+                
+
+                    <article class="pricing__card">
+                        <header class="pricing__header">
+                            <div class="pricing__shape">
+                                <img src="{% static 'img/program4.png' %}" alt="pricing image" class="pricing__img">
+                            </div>
+
+                            <h1 class="pricing__title">4 Day Split</h1>
+                            <h2 class="pricing__number">Upper Lower</h2>
+                        </header>
+
+                        <ul class="pricing__list">
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> Targets both upper and lower body muscle groups in separate workouts
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> Allows for adequate recovery of specific muscle groups between sessions
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> Provides flexibility in training frequency and volume for each body region
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> Promotes balanced muscle development and symmetry throughout the body
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> Enhances overall strength and muscular endurance through targeted upper and lower body training
+                            </li>
+                        </ul>
+
+                        <a href="{% url 'upperlowerpage' %}" class="button button__flex pricing__button">
+                            View <i class="ri-arrow-right-line"></i>
+                        </a>
+                    
+                </div>
+            </div>
+        </section>
+
+ <!--========== SCROLL UP ==========-->
+ <a href="#" class="scrollup" id="scroll-up">
+    <i class="ri-arrow-up-line"></i>
+</a>
+
+<!--=============== SCROLLREVEAL ===============-->
+<script src="{% static 'js/scrollreveal.min.js' %}"></script>
+
+<!--=============== EMAIL JS ===============-->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<!--=============== MAIN JS ===============-->
+<script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>

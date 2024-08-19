@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+    <!--=============== REMIXICON ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!--=============== CSS ===============-->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+    <title>SHX FIT </title>
+</head>
+
+<body>
+    <!--==================== HEADER ====================-->
+    {% include 'header.html' %}
+    
+    <section class="pricing section" id="pricing">
+            <div class="container">
+                <div class="section__data">
+                    <h2 class="section__subtitle">Excercises</h2>
+                    <div class="section__titles">
+                        <h1 class="section__title-border">FOR </h1>
+                        <h1 class="section__title">CARDIO</h1>
+                    </div>
+                </div>
+
+                <div class="pricing__container grid">
+                    <article class="pricing__card">
+                        <header class="pricing__header">
+                            <div class="pricing__shape">
+                                <img src="{% static 'img/program2.png' %}" alt="pricing image" class="pricing__img">
+                            </div> 
+                                <h2 class="pricing__number">HIIT</h2>
+                        </header>
+
+                        <ul class="pricing__list">
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> HIIT involves alternating between short bursts of intense exercise and brief rest or lower-intensity periods
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> Examples include sprinting, cycling at maximum effort, or performing high-intensity bodyweight exercises like burpees or jumping lunges
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> HIIT workouts are typically shorter in duration but highly effective for burning calories and improving cardiovascular fitness
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> They can be adapted to various fitness levels and goals, making them suitable for beginners to advanced athletes
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> HIIT is known for its ability to increase metabolism, improve insulin sensitivity, and promote fat loss while preserving muscle mass
+                            </li>
+                        </ul>
+                    
+                        <a href="{% url 'hiitpage' %}" class="button button__flex pricing__button">
+                            View Excercises<i class="ri-arrow-right-line"></i>
+                        </a>
+                    </article>
+
+                    <article class="pricing__card pricing__card-active">
+                        <header class="pricing__header">
+                            <div class="pricing__shape">
+                                <img src="{% static 'img/program2.png' %}" alt="pricing image" class="pricing__img">
+                            </div>
+
+                            
+                            <h2 class="pricing__number">LISS </h2>
+                        </header>
+
+                        <ul class="pricing__list">
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> LISS involves maintaining a consistent, low-intensity pace for an extended period
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> Common forms include walking, leisurely cycling, swimming, or using cardio machines like the treadmill or elliptical at a moderate pace
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> LISS is effective for improving cardiovascular health, enhancing recovery, and burning calories
+                            </li>
+                            <li class="pricing__item ">
+                                <i class="ri-checkbox-circle-line"></i> It's particularly suitable for individuals looking for a low-impact, sustainable form of cardio or as active recovery on rest day
+                            </li>
+                            <li class="pricing__item ">
+                                <i class="ri-checkbox-circle-line"></i> LISS sessions can vary in duration and intensity based on fitness goals and preferences
+                            </li>
+                        </ul>
+
+                        <a href="{% url 'lisspage' %}" class="button button__flex pricing__button">
+                            View Excercises<i class="ri-arrow-right-line"></i>
+                        </a>
+                    </article>
+
+                    <article class="pricing__card">
+                        <header class="pricing__header">
+                            <div class="pricing__shape">
+                                <img src="{% static 'img/program2.png' %}" alt="pricing image" class="pricing__img">
+                            </div>
+
+                            
+                            <h2 class="pricing__number">Circuit Training</h2>
+                        </header>
+
+                        <ul class="pricing__list">
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> Cardio circuit training combines cardiovascular exercises with strength exercises in a circuit format
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> This approach involves performing a series of exercises back-to-back with minimal rest in between, alternating between cardio and strength movements
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> Examples include jump rope intervals, kettlebell swings, bodyweight exercises like mountain climbers or high knees, followed by strength exercises like squats, lunges, or push-ups
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> Cardio circuit training provides a comprehensive full-body workout, effectively burning calories, improving cardiovascular fitness, and building strength simultaneously
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> It offers variety and can be customized based on individual fitness goals and preferences, making it suitable for those seeking a dynamic and efficient workout routine
+                            </li>
+                        </ul>
+
+                        <a href="{% url 'circuitpage' %}" class="button button__flex pricing__button">
+                            View Excercises <i class="ri-arrow-right-line"></i>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+ <!--========== SCROLL UP ==========-->
+ <a href="#" class="scrollup" id="scroll-up">
+    <i class="ri-arrow-up-line"></i>
+</a>
+
+<!--=============== SCROLLREVEAL ===============-->
+<script src="{% static 'js/scrollreveal.min.js' %}"></script>
+
+<!--=============== EMAIL JS ===============-->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<!--=============== MAIN JS ===============-->
+<script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>

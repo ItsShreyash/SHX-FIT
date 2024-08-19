@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+    <!--=============== REMIXICON ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!--=============== CSS ===============-->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+    <title>SHX FIT </title>
+</head>
+
+<body>
+    <!--==================== HEADER ====================-->
+    {% include 'header.html' %}
+    
+    <section class="pricing section" id="pricing">
+            <div class="container">
+                <div class="section__data">
+                    <h2 class="section__subtitle">Excercises</h2>
+                    <div class="section__titles">
+                        <h1 class="section__title-border">FOR </h1>
+                        <h1 class="section__title">PUSH PULL LEG</h1>
+                    </div>
+                </div>
+
+                <div class="pricing__container grid">
+                    <article class="pricing__card">
+                        <header class="pricing__header">
+                            <div class="pricing__shape">
+                                <img src="{% static 'img/program4.png' %}" alt="pricing image" class="pricing__img">
+                            </div>
+
+                            <h1 class="pricing__title">Chest <br> Shoulders <br> Triceps</h1>
+                            <h2 class="pricing__number">Push</h2>
+                        </header>
+
+                        <ul class="pricing__list">
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> Primarily focuses on exercises that involve pushing movements, targeting the chest, shoulders, and triceps
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> Includes compound exercises such as bench press, overhead press, and dips to maximize muscle recruitment
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> Incorporates isolation exercises like chest flyes, lateral raises, and tricep extensions to target specific muscle groups
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> Emphasizes progressive overload by increasing weight or reps over time to stimulate muscle growth
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> Utilizes a variety of rep ranges to target both strength and hypertrophy, promoting overall upper body development
+                            </li>
+                        </ul>
+                    
+                        <a href="{% url 'pushpage' %}" class="button button__flex pricing__button">
+                            View Excercises<i class="ri-arrow-right-line"></i>
+                        </a>
+                    </article>
+
+                    <article class="pricing__card">
+                        <header class="pricing__header">
+                            <div class="pricing__shape">
+                                <img src="{% static 'img/program4.png' %}" alt="pricing image" class="pricing__img">
+                            </div>
+
+                            <h1 class="pricing__title">Back <br> Biceps</h1>
+                            <h2 class="pricing__number">Pull</h2>
+                        </header>
+
+                        <ul class="pricing__list">
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> Focuses on exercises that involve pulling movements, primarily targeting the back, biceps, and rear deltoids
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> Includes compound exercises such as deadlifts, pull-ups, and barbell rows to engage multiple muscle groups simultaneously
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> Incorporates isolation exercises like bicep curls, face pulls, and dumbbell rows to isolate and strengthen specific muscle groups
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> Prioritizes proper form and technique to effectively engage the targeted muscles and minimize the risk of injury
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> Utilizes progressive overload by gradually increasing resistance or volume to stimulate muscle growth and strength development in the upper body posterior chain
+                            </li>
+                        </ul>
+                    
+                        <a href="{% url 'pullpage' %}" class="button button__flex pricing__button">
+                            View Excercises<i class="ri-arrow-right-line"></i>
+                        </a>
+                    </article>
+
+                    <article class="pricing__card">
+                        <header class="pricing__header">
+                            <div class="pricing__shape">
+                                <img src="{% static 'img/program4.png' %}" alt="pricing image" class="pricing__img">
+                            </div>
+
+                            <h1 class="pricing__title">Lower Body</h1>
+                            <h2 class="pricing__number">Legs</h2>
+                        </header>
+
+                        <ul class="pricing__list">
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> Focuses on exercises targeting the lower body, including quadriceps, hamstrings, glutes, and calves
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> Incorporates compound movements such as squats, lunges, and deadlift variations to engage multiple muscle groups simultaneously
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> Includes isolation exercises like leg curls, leg extensions, and calf raises to target specific muscles and enhance muscular balance
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> Incorporates both bilateral and unilateral exercises to improve overall leg strength, stability, and coordination
+                            </li>
+                            <li class="pricing__item">
+                                <i class="ri-checkbox-circle-line"></i> Emphasizes progressive overload by gradually increasing resistance, volume, or intensity to stimulate muscle growth and strength gains in the lower body
+                            </li>
+                        </ul>
+                    
+                        <a href="{% url 'legspage' %}" class="button button__flex pricing__button">
+                            View Excercises<i class="ri-arrow-right-line"></i>
+                        </a>
+                    </article>
+
+                    
+                    
+                </div>
+            </div>
+        </section>
+
+ <!--========== SCROLL UP ==========-->
+ <a href="#" class="scrollup" id="scroll-up">
+    <i class="ri-arrow-up-line"></i>
+</a>
+
+<!--=============== SCROLLREVEAL ===============-->
+<script src="{% static 'js/scrollreveal.min.js' %}"></script>
+
+<!--=============== EMAIL JS ===============-->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<!--=============== MAIN JS ===============-->
+<script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>
